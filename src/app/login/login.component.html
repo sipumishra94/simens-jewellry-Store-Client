@@ -1,0 +1,56 @@
+<div class="container ">
+    <div class="row">
+      <div class="col-sm-4 offset-sm-4 mt-5 backgroundWhiteBorder">
+        <form #loginForm="ngForm" (ngSubmit)="login()" 
+            autocomplete="off">
+            <div class="form-group row justify-content-center align-items-center">
+                <label for="userName" class="col-sm-3 col-form-label">Username</label>
+                <div class="col-sm-9">
+                    <input [(ngModel)]="loginDetails.userName" name="userName" type="text" class="form-control" placeholder="Username">
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-center align-items-center">
+                <label for="userName" class="col-sm-3 col-form-label">Password</label>
+                <div class="col-sm-9">
+                    <input [(ngModel)]="loginDetails.password" name="password" type="password" class="form-control" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group row justify-content-center align-items-center">
+                <button class="btn btn-success col-sm-3 offset-sm-1" type="submit">Login</button>
+                <button (click) = "cancel()" class="btn btn-warning col-sm-3 mx-5">Cancel</button>
+            </div>
+        </form>
+      </div>
+    </div>
+</div>
+<!-- <div class="main-div">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div class="login-box-header">
+           Login
+        </div>
+      </mat-card-header>
+      <mat-card-content>
+        <form class="example-form">
+          <table class="example-full-width" cellspacing="0">
+            <tr>
+              <td>
+                <mat-form-field class="example-full-width">
+                <input matInput placeholder="Username" [(ngModel)]="loginDetails.userName" name="username" required>
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+            <td><mat-form-field class="example-full-width">
+              <input matInput placeholder="Password" [(ngModel)]="loginDetails.password" type="password" name="password" required>
+            </mat-form-field></td>
+          </tr></table>
+        </form>
+        <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button (click)="login()" color="primary">Login</button>
+      </mat-card-actions>
+    </mat-card>
+ -->

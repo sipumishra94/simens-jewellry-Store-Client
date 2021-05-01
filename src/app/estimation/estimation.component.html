@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 offset-sm-2 mt-5 backgroundWhiteBorder">
+            <div class="row mb-3">
+                <div class="col-sm-4 offset-sm-6 text-danger h4">
+                    <label>Welcome: {{userDetails?.userName}}</label>
+                </div>
+                <div class="col-sm-2 text-danger h4">
+                    <button title="Log out"><i class="fa fa-sign-out" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="form-group row justify-content-center align-items-center">
+                <label for="goldPrice" class="col-sm-3 col-form-label">Gold Price (per gm)</label>
+                <div class="col-sm-9">
+                    <input  name="goldPrice" type="number" class="form-control" placeholder="Price">
+                </div>
+            </div>
+        
+            <div class="form-group row justify-content-center align-items-center">
+                <label for="weight" class="col-sm-3 col-form-label">Weight (grams)</label>
+                <div class="col-sm-9">
+                    <input name="weight" type="number" class="form-control" placeholder="Weight">
+                </div>
+            </div>
+        
+            <div class="form-group row justify-content-center align-items-center">
+                <label for="totalPrice" class="col-sm-3 col-form-label">Total Price</label>
+                <div class="col-sm-9">
+                    <input name="totalPrice" type="number" class="form-control" placeholder="totalPrice">
+                </div>
+            </div>
+        
+            <div *ngIf="userDetails?.userRole === 'privilaged'" class="form-group row justify-content-center align-items-center">
+                <label for="discount" class="col-sm-3 col-form-label">Discount</label>
+                <div class="col-sm-9">
+                    <input name="discount" disabled type="number" class="form-control" placeholder="discount">
+                </div>
+            </div>
+            <div class="form-group row  align-items-center ">
+                <button class="btn btn-success col-sm-2 mr-1 ml-0 pl-0" type="submit">Calculate</button>
+                <button class="btn btn-info col-sm-3 mr-1" type="submit">Print to Screen</button>
+                <button class="btn btn-info col-sm-2 mr-1" type="submit">Print to File</button>
+                <button class="btn btn-info col-sm-2 mr-1" type="submit">Print to paper</button>
+                <button class="btn btn-warning col-sm-2" type="submit">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
