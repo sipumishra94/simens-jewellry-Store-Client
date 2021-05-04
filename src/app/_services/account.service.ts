@@ -27,6 +27,9 @@ export class AccountService {
     localStorage.removeItem('user');
   }
 
+  GetDiscount(){
+    return this.http.get(this.baseUrl + 'User/Discount')
+  }
   setCurrentUser(user: UserDetails) {
     localStorage.setItem('user', JSON.stringify(user));
   }
